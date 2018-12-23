@@ -240,11 +240,8 @@ Equation)作为渲染领域中的重要理论，其描述了光能在场景中�
 
 而在实时渲染中，我们常用的反射方程(The Reflectance Equation)，则是渲染方程的简化的版本，或者说是一个特例：
 
-![https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20%5Chuge%20%7B%5Cdisplaystyle%20L_%7Bo%7D%3D%5Cint%20_%7B%5COmega%20%7Df_%7Br%7D%5Ccdot%20L_%7Bi%7D%5Ccdot%20%28%7B%7Bw_%7Bi%7D%7D%7D%5Ccdot%20%7Bn%7D%29%5Ccdot%20d%7B%20%7Bw_%7Bi%7D%7D%7D%7D](media/15ff7d98da115cda7a62350ab82f1299.png)
+![](media/15ff7d98da115cda7a62350ab82f1299.png)
 
-https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20%5Chuge%20%7B%5Cdisplaystyle%20L_%7Bo%7D%3D%5Cint%20_%7B%5COmega%20%7Df_%7Br%7D%5Ccdot%20L_%7Bi%7D%5Ccdot%20%28%7B%7Bw_%7Bi%7D%7D%7D%5Ccdot%20%7Bn%7D%29%5Ccdot%20d%7B%20%7Bw_%7Bi%7D%7D%7D%7D
-
-https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20%5Chuge%20%7B%5Cdisplaystyle%20L_%7Bo%7D%3D%5Cint%20_%7B%5COmega%20%7Df_%7Br%7D%5Ccdot%20L_%7Bi%7D%5Ccdot%20%28%7B%7Bw_%7Bi%7D%7D%7D%5Ccdot%20%7Bn%7D%29%5Ccdot%20d%7B%20%7Bw_%7Bi%7D%7D%7D%7D
 
 其中：
 
@@ -269,10 +266,6 @@ BxDF一般而言是对BRDF、BTDF、BSDF、BSSRDF等几种双向分布函数的�
 在上述这些BxDF中，BRDF最为简单，也最为常用。因为游戏和电影中的大多数物体都是不透明的，用BRDF就完全足够。而BSDF、BTDF、BSSRDF往往更多用于半透明材质和次表面散射材质。
 
 ![](media/8c60f94b8b6f430fc5dcb41068770454.png)
-
-F:\\ChromeDownload\\BSDF05_800 (1).png
-
-F:\\ChromeDownload\\BSDF05_800 (1).png
 
 图 BSDF：BRDF + BTDF
 
@@ -330,9 +323,7 @@ Disney》，提出了迪士尼原则的BRDF（Disney Principled BRDF），
 
 在2012年迪士尼原则的BRDF被提出之前，基于物理的渲染都需要大量复杂而不直观的参数，此时PBR的优势，并没有那么明显。
 
-而在2012年迪士尼提出，他们的**着色模型是艺术导向（Art
-Directable）的，而不一定要是完全物理正确（physically
-correct）**的，并且对微平面BRDF的各项都进行了严谨的调查，并提出了清晰明确而简单的解决方案。
+在2012年迪士尼提出，他们的**着色模型是艺术导向（Art Directable）的，而不一定要是完全物理正确（physically correct**的，并且对微平面BRDF的各项都进行了严谨的调查，并提出了清晰明确而简单的解决方案。
 
 迪士尼的理念是开发一种“原则性”的易用模型，而不是严格的物理模型。正因为这种艺术导向的易用性，能让美术同学用非常直观的少量参数，以及非常标准化的工作流，就能快速实现涉及大量不同材质的真实感的渲染工作。而这对于传统的着色模型来说，是不可能完成的任务。
 
