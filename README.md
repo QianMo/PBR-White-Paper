@@ -5,7 +5,7 @@
 
 - **[（一） 开篇：PBR核心知识体系总结与概览](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%201/README.md)**
 
-
+- 持续更新中
 
 
 # PBR知识体系架构图

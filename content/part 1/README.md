@@ -2,6 +2,7 @@
 
 # 【基于物理的渲染（PBR）白皮书】（一） 开篇：PBR核心知识体系总结与概览
 
+本文的知乎专栏版本：https://zhuanlan.zhihu.com/p/53086060
 
 先放出PBR知识体系的架构图：
 
@@ -12,6 +13,8 @@
 <https://raw.githubusercontent.com/QianMo/PBR-White-Paper/master/media/PBR-White-Paper-Knowledge-Architecture-1.0.png>
 
 这张架构图是这个系列文章的内容框架，而且会随着内容的深入，不断更新。目前是1.0版。
+
+<BR>
 
 # 系列文章前言
 
@@ -48,7 +51,7 @@ Theory and Practice》系列2010年到2017年的几十篇talk和note（可惜这
 也看了一些相关的著作。目前了解到的PBR相关的著作，主要有三本：
 
 -   《Physically Based Rendering: From Theory to Implementation, Third
-    Edition》这本书主要专注离线渲染，实时渲染只能用到里面很少的一部分。现已web版免费全文阅读，非常良心：<http://www.pbr-book.org/3ed-2018/contents.html>。
+    Edition》这本书主要专注离线渲染，实时渲染只能用到里面很少的一部分。PBRT3现已开放Web版全文免费阅读，非常良心：<http://www.pbr-book.org/3ed-2018/contents.html>。
 
 -   《Real-Time Rendering 4th》中PBR的相关章节，个人认为是非常不错的资料。
 
@@ -67,6 +70,8 @@ Rendering 3rd》 提炼总结】系列，以及还未完结的【GPU精粹】系
 提炼总结】的方式，在这个系列完结后，会进行整理，集结成册，成为一本电子书，暂定书名为《基于物理的渲染（PBR）白皮书》。所以个系列目前便直接命名为【基于物理的渲染（PBR）白皮书】，便于整体的认知。
 
 希望这个新的系列，能对大家有所帮助。
+
+<br>
 
 # PBR知识体系概览
 
@@ -89,6 +94,8 @@ Rendering 3rd》 提炼总结】系列，以及还未完结的【GPU精粹】系
 -   八、进阶渲染主题（Advanced Rendering Topics）
 
 通过接下来的概览，希望能在后续的具体章节展开前，让大家对PBR的整体知识体系，有一个全面的认知，所谓的大局观的建立。
+
+<br>
 
 # 一、PBR核心理论与渲染原理
 
@@ -122,6 +129,8 @@ Rendering，PBR）是指使用基于物理原理和微平面理论建模的着�
 
 除了PBR的基础理论，光与非光学平坦表面的交互对理解微平面理论（Microfacet
 Theory）至关重要。下面进行一些说明。
+
+<br>
 
 ## 1.1 光与非光学平坦表面的交互原理
 
@@ -164,6 +173,8 @@ Surfaces）的交互时，非光学平坦表面表现得像一个微小的光学
 图
 在非金属中，折射的光会进行散射，直到从表面重新射出，而这通常会在经过部分吸收之后
 
+<br>
+
 ## 1.2 漫反射和次表面散射本质相同
 
 另外，漫反射和次表面散射其实是相同物理现象，本质都是折射光的次表面散射的结果。唯一的区别是相对于观察尺度的散射距离。散射距离相较于像素来说微不足道，次表面散射便可以近似为漫反射。也就是说，光的折射现象，建模为漫反射还是次表面散射，取决于观察的尺度，如下图。
@@ -174,6 +185,8 @@ Surfaces）的交互时，非光学平坦表面表现得像一个微小的光学
 在这种情况下，可以假设出射光从入口点（右上）射出，可以当做漫反射，用局部着色模型处理。
 在底部，像素小于散射距离;
 如果需要更真实的着色效果，则不能忽略这些距离的存在，需当做次表面散射现象进行处理。
+
+<br>
 
 ## 1.3 PBR的范畴（Scope of PBR）
 
@@ -191,12 +204,17 @@ PBR》中提出，基于物理的渲染的范畴，由三部分组成：
 完整的这三者，才是真正完整的基于物理的渲染系统。而很多同学一提到PBR，就说PBR就是镜面反射采用微平面Cook-Torrance模型，其实是不太严谨的。
 
 
+<br>
+
+
 # 二、渲染方程与BxDF
 
 
 PBR核心知识体系的第二部分是渲染方程与BxDF。渲染方程作为渲染领域中的重要理论，将BxDF代入渲染方程是求解渲染问题的一般方法。
 
 ![](media/104ed41592ecd970652b25a6ee7d7979.png)
+
+<br>
 
 ## 2.1 渲染方程与反射方程
 
@@ -244,6 +262,8 @@ Equation)作为渲染领域中的重要理论，其描述了光能在场景中�
 ![](media/41c027f83e91e911e6bcc195d14d1a82.png)是入射角带来的入射光衰减
 
 ![](media/85995c017ecf1b866b10d6845f276067.png)是入射方向半球的积分（可以理解为无穷小的累加和）。
+
+<br>
 
 ## 2.2 BxDF
 
@@ -306,7 +326,11 @@ Disney》，提出了迪士尼原则的BRDF（Disney Principled BRDF），
 -   【GDC 2014】 Unity：Physically Based Shading in Unity
 
 
+<br>
+
 ## 3.1 迪士尼原则的BRDF（Disney Principled BRDF）
+
+<br>
 
 
 ### 3.1.1 Disney Principled BRDF核心理念
@@ -330,6 +354,8 @@ Disney》，提出了迪士尼原则的BRDF（Disney Principled BRDF），
 5.  所有参数组合应尽可能健壮和合理。
 
 以上五条原则，很好地保证了迪士尼原则的BRDF的易用性。
+
+<br>
 
 ### 3.1.2 Disney Principled BRDF参数
 
@@ -366,6 +392,8 @@ Disney》，提出了迪士尼原则的BRDF（Disney Principled BRDF），
 ![](media/f3b2624505b670b1243fdab515e98295.png)
 
 图 Disney Principled BRDF。 每行的参数从0到1变化，其他参数保持不变
+
+<br>
 
 ## 3.2 迪士尼原则的BSDF（Disney Principled BSDF）
 
@@ -408,6 +436,8 @@ BRDF）：
 
 -   MultiScattrering Diffuse BRDF [2018]
 
+<br>
+
 ## 五、镜面反射BRDF模型（Specular BRDF）
 
 PBR核心知识体系的第五部分是Specular BRDF。这也是基于物理的渲染领域中最活跃，最主要的部分。
@@ -441,6 +471,8 @@ PBR核心知识体系的第五部分是Specular BRDF。这也是基于物理的�
 
 图 在左侧，我们看到一些表面点从l的方向被遮挡，因此它们被遮挡并且不接收光（因此它们不能反射任何）。在中间，我们看到从视图方向v看不到一些表面点，因此当然不会看到从它们反射的任何光。在这两种情况下，这些表面点对BRDF没有贡献。实际上，虽然阴影区域没有从l接收任何直射光，但它们确实接收（并因此反射）从其他表面区域反射的光（如右图所示）。microfacet理论忽略了这些相互反射。
 
+<br>
+
 
 ## 5.1 从物理现象到BRDF
 
@@ -472,6 +504,8 @@ Cook-Torrance BRDF的一般形式的Specular BRDF项。此Specular BRDF具有以
 下面对Microfacet Cook-Torrance BRDF中的D、F、G项分别进行简要说明。
 
 
+<br>
+
 ## 5.2 Specular D
 
 
@@ -502,6 +536,8 @@ Distribution
 Function翻译成正态分布函数，而不少中文资料就跟着翻译成了正态分布函数，这是错误的。其实，一些参考文献会使用术语“法线分布(distribution
 of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆。
 
+<br>
+
 ## 5.3 Specular F
 
 
@@ -517,6 +553,8 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 -   Schlick [1994]
 
 -   Gotanta [2014]
+
+<br>
 
 ## 5.4 Specular G
 
@@ -568,6 +606,8 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 ![](media/982e3672c32998079331a1186dc61e77.png)
 
 
+<br>
+
 
 # 六、基于物理的环境光照（Physically Based Environment Lighting ）
 
@@ -581,6 +621,8 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 而基于物理的镜面反射（Specular）环境光照，业界中一般会采用基于图像的光照（IBL）的方案。要将基于物理的BRDF模型与基于图像的光照（IBL）一起使用，需要求解光亮度积分（Radiance Integral），而求解光亮度积分通常会使用重要性采样（Importance Sample）。
 
 重要性采样（Importance Sample）即通过现有的一些已知条件（分布函数），想办法集中于被积函数分布可能性较高的区域(重要的区域)进行采样，进而可高效地计算准确的估算结果的的一种策略。
+
+<br>
 
 ## 6.1 分解求和近似（Split Sum Approximation）
 
@@ -599,6 +641,8 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 
 而在实时渲染中，分别计算分解求和近似（Split Sum Approximation）方案中几乎已经预计算好的两项，再进行组合，作为实时的IBL物理环境光照部分的渲染结果。下面分别对两项进行简单概括。
 
+<br>
+
 
 ## 6.2 第一项 预过滤环境贴图（Pre-filtered environment map）
 
@@ -609,12 +653,16 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 
 也就是说，第一项直接使用cubemap 的mip级别采样输入即可。
 
+<br>
+
 ## 6.3 第二项 环境BRDF （Environment BRDF）
 
 
 第二项为![](media/7841dfa7d76eb7e831b0d2f5bc2e3bd6.png)，即镜面反射项的半球方向反射率（hemispherical-directionalreflectance），可以理解为环境BRDF （Environment BRDF）。其取决于仰角θ，粗糙度α和菲涅耳项F。 通常使用Schlick近似来近似F，其仅在单个值F0上参数化，从而使Rspec成为三个参数（仰角θ（NdotV），粗糙度α、F0）的函数。
 
 这一项的主要流派有两个，UE4的2D LUT，以及COD：OP2的解析拟合。
+
+<br>
 
 ### 6.3.1 流派1：2D LUT
 
@@ -634,6 +682,8 @@ UE4在[[Real Shading in Unreal Engine 4, 2013]]中提出，第二个求和项 �
 
 即UE4是通过把Fresnel公式的F0提出来，组成F0 * Scale +Offset的方式，再将Scale和Offset的索引存到一张2D LUT上。靠roughness和
 NdotV进行查找。
+
+<br>
 
 ### 6.3.2 流派2：解析拟合
 
@@ -667,12 +717,14 @@ LUT用如下函数进行了拟合：
 
 EnvironmentBRDF函数的输入参数分别为光泽度gloss，NdotV，F0。和UE4的做法有异曲同工之妙，但COD：Black Ops 2的做法不需要额外的贴图采样，这在进行移动端优化时，是不错的选择。
 
+<br>
+
 ### 6.3.3 其他流派
 
 Gotanda在SIGGRAPH 2010提出使用3D LUT[Practical Implementation of Physically-Based Shading Models at tri-Ace,2010]来存放环境BRDF，之后Drobot将其优化为2D LUT[Lighting Killzone:Shadow Fall , 2013]。
 
 
-<BR>
+<br>
 
 # 七、离线渲染相关（Offline Rendering Related）
 
@@ -699,7 +751,9 @@ Gotanda在SIGGRAPH 2010提出使用3D LUT[Practical Implementation of Physically
 
 与实时渲染结合相对紧密的离线渲染相关的内容，后续文章会以专题的形式详细探讨。
 
-<BR>
+
+<br>
+
 
 # 八、进阶渲染主题（Advanced Rendering Topics）
 
@@ -779,6 +833,8 @@ Gotanda在SIGGRAPH 2010提出使用3D LUT[Practical Implementation of Physically
 
 以上这些内容，作为进阶的主题，随便选取其中的一个展开来讨论，几乎都会有不小的篇幅。目前的计划是，是在前七章基础PBR内容讨论完成后，再在这些主题中选取新的内容，进行更深入的讨论。
 
+<br>
+
 
 # 结语
 
@@ -789,6 +845,8 @@ OK，这篇文章作为这个系列的开篇，是对PBR知识体系的一个概
 
 敬请期待。
 
+
+<br>
 
 
 # Reference
