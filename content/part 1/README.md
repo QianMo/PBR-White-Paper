@@ -620,7 +620,9 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 
 ### 6.3.1 流派1：2D LUT
 
-UE4在[]中提出，第二个求和项 ，使用Schlick近似后， F0可以从积分中分出来：
+UE4在[[Real Shading in Unreal Engine 4, 2013]]中提出，第二个求和项 ，使用Schlick近似后， F0可以从积分中分出来：
+
+![](media/46.png)
 
 上式留下了两个输入（Roughness 和 cos θv）和两个输出（缩放和向F0的偏差（a scale and bias to F0）），即把上述方程看成是F0 * Scale + Offset的形式。
 我们预先计算此函数的结果并将其存储在2D查找纹理（LUT，look-up texture）中。
