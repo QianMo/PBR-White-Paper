@@ -839,6 +839,7 @@ OK，这篇文章作为这个系列的开篇，是对PBR知识体系的一个概
 
 敬请期待。
 
+![](media/723cefbe5630048b318ba9e244d52ded.jpg)
 
 <br>
 
@@ -911,4 +912,3 @@ Real-Time Rendering , SIGGRAPH 2018
 
 [23] 题图来自《Assassin's Creed Odyssey》
 
-![](media/723cefbe5630048b318ba9e244d52ded.jpg)
