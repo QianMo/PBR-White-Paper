@@ -61,13 +61,11 @@ Theory and Practice》系列2010年到2017年的几十篇talk和note（可惜这
 
 期间也记过一些笔记，已经有不少的篇幅，但内容始终比较零散。所以有了萌生将这些笔记整理成更系统的系列文章的念头。
 
-通过将零散的笔记进行总结，集结成文章，并发布出来，既对想更系统而深入地了解PBR和实时渲染相关技术的朋友们所有帮助，对我自己而言，在总结的过程中，也应该会收获颇丰。正如已经完结的【《Real-Time
-Rendering 3rd》 提炼总结】系列，以及还未完结的【GPU精粹】系列一样。
+通过将零散的笔记进行总结，集结成文章，并发布出来，既对想更系统而深入地了解PBR和实时渲染相关技术的朋友们所有帮助，对我自己而言，在总结的过程中，也应该会收获颇丰。正如已经完结的【《Real-Time Rendering 3rd》 提炼总结】系列，以及还未完结的【GPU精粹】系列一样。
 
 而目前，国内似乎确实缺少一个较为系统、全面、深入介绍基于物理的实时渲染的系列文章。
 
-另外，类似之前【《Real-Time Rendering 3rd》
-提炼总结】的方式，在这个系列完结后，会进行整理，集结成册，成为一本电子书，暂定书名为《基于物理的渲染（PBR）白皮书》。所以个系列目前便直接命名为【基于物理的渲染（PBR）白皮书】，便于整体的认知。
+另外，类似之前【《Real-Time Rendering 3rd》提炼总结】的方式，在这个系列完结后，会进行整理，集结成册，成为一本电子书，暂定书名为《基于物理的渲染（PBR）白皮书》。所以此系列目前便直接命名为了【基于物理的渲染（PBR）白皮书】，便于整体认知的延续。
 
 希望这个新的系列，能对大家有所帮助。
 
@@ -296,17 +294,13 @@ BxDF一般而言是对BRDF、BTDF、BSDF、BSSRDF等几种双向分布函数的�
 # 三、迪士尼原则的BxDF（Disney Principled BxDF）
 
 
-PBR核心知识体系的第三部分是迪士尼原则的BxDF。迪士尼动画工作室在SIGGRAPH
-2012上注明的talk上提出了著名的talk《Physically-based shading at
-Disney》中提出了迪士尼原则的BRDF（Disney Principled
-BRDF），奠定了后续游戏行业和电影行业PBR的方向和标准。了解Disney Principled
-BxDF，是深入理解PBR的重要一环。
+PBR核心知识体系的第三部分是迪士尼原则的BxDF。迪士尼动画工作室在SIGGRAPH 2012上著名的talk《Physically-based shading at Disney》中提出了迪士尼原则的BRDF（Disney Principled BRDF），奠定了后续游戏行业和电影行业PBR的方向和标准。了解Disney Principled BxDF，是深入理解PBR的重要一环。
 
 ![](media/3bd5aa554bfd06b27c66abd6a7a52a50.png)
 
 基于物理的渲染，其实早在20世纪就已经在图形学业界有了一些讨论，2010年在SIGGRAPH上就已经有公开讨论的Course
 《SIGGRAPH 2010 Course: Physically-Based Shading Models in Film and Game
-Production》，而直到2012\~2013年，才正式进入大众的视野，渐渐被电影和游戏业界广泛使用。
+Production》，而直到2012~2013年，才正式进入大众的视野，渐渐被电影和游戏业界广泛使用。
 
 迪士尼动画工作室则是这次PBR革命的重要推动者。迪士尼的Brent Burley于SIGGRAPH
 2012上进行了著名的talk《Physically-based shading at
@@ -400,7 +394,7 @@ Disney》，提出了迪士尼原则的BRDF（Disney Principled BRDF），
 
 随后的2015年，迪士尼动画工作室在Disney Principled BRDF的基础上进行了修订，提出了Disney Principled BSDF [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering, 2015]。
 
-以下是三维软件Blender实现的Disney Principled BSDF的图示：
+以下是开源三维动画软件Blender实现的Disney Principled BSDF的图示：
 
 ![](media/e81277e4a9883842f68dadbce1692715.jpg)
 图 Disney Principled BSDF
