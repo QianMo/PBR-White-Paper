@@ -474,7 +474,7 @@ PBR核心知识体系的第五部分是Specular BRDF。这也是基于物理的�
 利用这些假设（局部光学平坦表面，没有相互反射），可以很容易推导出一个被称为Microfacet
 Cook-Torrance BRDF的一般形式的Specular BRDF项。此Specular BRDF具有以下形式：
 
-![](media/cf4c2d3b087e21e868366f8af8ba2e92.png)
+![](media/cf4c2d3b087e21e868366f8af8ba2e921.png)
 
 其中：
 
