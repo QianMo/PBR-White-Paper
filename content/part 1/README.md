@@ -639,7 +639,7 @@ NdotV进行查找。
 
 ### 6.3.2 流派2：解析拟合
 
-COD：Black Ops 2的做法，通过数学工具Mathematica（http://www.wolfram.com/mathematica/） 中的数值积分拟合出曲线，即将UE4离线计算的这张2D
+COD：Black Ops 2的做法，是通过数学工具Mathematica（http://www.wolfram.com/mathematica/） 中的数值积分拟合出曲线，即将UE4离线计算的这张2D
 LUT用如下函数进行了拟合：
 
     float3 EnvironmentBRDF( float g, float NoV, float3 rf0 )
@@ -785,7 +785,7 @@ Gotanda在SIGGRAPH 2010提出使用3D LUT[Practical Implementation of Physically
 # 结语
 
 
-OK，这篇文作为这个系列对PBR知识体系的一个概览，相当于开了一个头，给全新的篇章描绘出了大致的轮廓。
+OK，这篇文章作为这个系列的开篇，是对PBR知识体系的一个概览，相当于开了一个头，给全新的篇章描绘出了大致的轮廓。
 
 后续的文章，会对PBR知识体系的各个章节，进行更系统深入的论述。
 
