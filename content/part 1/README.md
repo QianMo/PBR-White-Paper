@@ -652,7 +652,7 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 ## 6.3 第二项 环境BRDF （Environment BRDF）
 
 
-第二项为![](media/7841dfa7d76eb7e831b0d2f5bc2e3bd6.png)，即镜面反射项的半球方向反射率（hemispherical-directionalreflectance），可以理解为环境BRDF （Environment BRDF）。其取决于仰角θ，粗糙度α和菲涅耳项F。 通常使用Schlick近似来近似F，其仅在单个值F0上参数化，从而使Rspec成为三个参数（仰角θ（NdotV），粗糙度α、F0）的函数。
+第二项为![](media/7841dfa7d76eb7e831b0d2f5bc2e3bd6.png)，即镜面反射项的半球方向反射率（hemispherical-directional reflectance），可以理解为环境BRDF （Environment BRDF）。其取决于仰角θ，粗糙度α和菲涅耳项F。 通常使用Schlick近似来近似F，其仅在单个值F0上参数化，从而使Rspec成为三个参数（仰角θ（NdotV），粗糙度α、F0）的函数。
 
 这一项的主要流派有两个，UE4的2D LUT，以及COD：OP2的解析拟合。
 
