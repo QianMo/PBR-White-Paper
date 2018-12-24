@@ -535,7 +535,7 @@ of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆
 ## 5.3 Specular F
 
 
-对于菲涅尔（Fresnel）项，业界方一般都采用Schlick的Fresnel近似，因为计算成本低廉，而且精度足够：
+对于菲涅尔（Fresnel）项，业界方案一般都采用Schlick的Fresnel近似，因为计算成本低廉，而且精度足够：
 
 ![](media/8c145484bc6c975b4fbbfe7b27e8df45.png)
 
