@@ -484,10 +484,10 @@ Cook-Torrance BRDF的一般形式的Specular BRDF项。此Specular BRDF具有以
 -  **F（l，h）**: 菲涅尔方程（Fresnel
     Equation），描述不同的表面角下表面所反射的光线所占的比率。
 
--   **G（l，v，h）**几何函数（Geometry Function）：描述微平面自成阴影的属性，即m =
+-  **G(l，v，h)**: 几何函数（Geometry Function）：描述微平面自成阴影的属性，即m =
     h的未被遮蔽的表面点的百分比。
 
--   分母  4（n·l）（n·v）是校正因子（correctionfactor），作为微观几何的局部空间和整个宏观表面的局部空间之间变换的微平面量的校正。
+-   **分母 4（n·l）（n·v）** ：校正因子（correctionfactor），作为微观几何的局部空间和整个宏观表面的局部空间之间变换的微平面量的校正。
 
 关于Cook-Torrance BRDF，需要强调的两点注意事项：
 
@@ -525,9 +525,7 @@ Cook-Torrance BRDF的一般形式的Specular BRDF项。此Specular BRDF具有以
 ![](media/d9b94cd41cd6cea5cfe6c13c93784b69.png)
 
 另外，需要强调一点。**Normal Distribution
-Function正确的翻译是法线分布函数，而不是正态分布函数。**google翻译等翻译软件会将Normal
-Distribution
-Function翻译成正态分布函数，而不少中文资料就跟着翻译成了正态分布函数，这是错误的。其实，一些参考文献会使用术语“法线分布(distribution
+Function正确的翻译是法线分布函数，而不是正态分布函数。** google翻译等翻译软件会将Normal Distribution Function翻译成正态分布函数，而不少中文资料就跟着翻译成了正态分布函数，这是错误的。其实，一些参考文献会使用术语“法线分布(distribution
 of normals)”来避免与高斯正态分布(Gaussian normal distribution)混淆。
 
 <br>
