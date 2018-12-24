@@ -1,6 +1,8 @@
 
-# 基于物理的渲染（PBR）白皮书 | PBR White Paper
 
+![](media/title.jpg)
+
+# 基于物理的渲染（PBR）白皮书 | PBR White Paper
 ## 目录
 
 - **[（一） 开篇：PBR核心知识体系总结与概览](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%201/README.md)**
