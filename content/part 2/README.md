@@ -140,7 +140,7 @@ of Rochester）
 
 光的吸收对视觉效果有直接影响，因为会降低光的强度，并且如果吸收对某些可见波长具有选择性，也会改变光的颜色。如下图。
 
-![](media/957e0bcc0e3319cda5d47bbff81f2086.emf)
+![](media/957e0bcc0e3319cda5d47bbff81f2086.png)
 
 图 光的吸收导致透明介质的不同颜色外观。
 
@@ -206,7 +206,7 @@ Physics and Math of Shading）
 例如，当观察房间中的一杯水时，在空气中的光的散射和在光在水中的吸收都是不可见的。
 但是，在宽阔的环境中，两种效果都很重要，如下图所示。
 
-![](media/a531e77cc2765b3c77ac31ab39da494f.emf)
+![](media/a531e77cc2765b3c77ac31ab39da494f.png)
 
 图 左图显示，在多米的距离内，水吸收光线，特别是红光，非常强烈。
 正确的图像显示在多英里的空气中有明显的光散射，即使在没有重污染或雾的情况下也是如此。（图片来自Hoffman N. Background: Physics and Math of Shading）
@@ -376,7 +376,7 @@ N. Background: Physics and Math of Shading）
 
 上文已经提到，当光线垂直（以0度角）撞击表面时，该光线被反射（Reflected）为镜面反射光的比率被称为F0。即F0为0度角入射时的菲涅尔反射率。而折射（refracted）到表面中的光量则为为1-F0。如下图。
 
-![](media/a18e6e86e8ab561037718d63ae71cfa6.png)
+![](media/27.png)
 
 图 对于光滑的电介质表面，在0度角入射（F0）将反射2-5％的光，在掠射角入射下将反射100％的光（图片来自The PBR Guide by allegorithmic- Vol. 1）
 
