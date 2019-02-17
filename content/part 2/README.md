@@ -541,7 +541,7 @@ N. Background: Physics and Math of Shading）
 
 ![](media/d4d3f73ed9bf3ac77e0b0a9b9bddc790.png)
 
-另外，本文本来也会聊到线性空间渲染与Tone Mapping的更多内容，但加上后篇幅已经远远超出了字数限制。没事，我们在随后的文章中再聊吧。
+另外，本文本来也会聊到线性空间渲染与Tone Mapping的更多内容，但加上后篇幅已经远远超出了字数限制。没事，我们不妨在随后的文章中再聊。
 
 以上。
 
