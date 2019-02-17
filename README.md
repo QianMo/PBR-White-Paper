@@ -7,6 +7,9 @@
 
 - **[（一） 开篇：PBR核心知识体系总结与概览](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%201/README.md)**
 
+- **[（二） PBR核心理论与渲染光学原理总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%202/README.md)**
+
+
 - 持续更新中
 
 
@@ -16,3 +19,10 @@
 
 
 ![](media/PBR-White-Paper-Knowledge-Architecture-1.0.png)
+
+
+<br>
+
+# 二、PBR核心理论与渲染光学原理知识架构图
+
+![](media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)
