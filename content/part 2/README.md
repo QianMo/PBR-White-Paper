@@ -581,3 +581,7 @@ N. Background: Physics and Math of Shading）
 [12] <https://en.wikipedia.org/wiki/Photoreceptor_cell>
 
 [13] Ratković J. Physically based rendering[D]. Fakultet elektrotehnike iračunarstva, Sveučilište u Zagrebu, 2017.
+
+[14] 题图来自FarCry 5
+
+![](media/endpic.jpg)
