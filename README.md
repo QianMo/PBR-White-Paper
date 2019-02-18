@@ -13,7 +13,7 @@
 - 后续章节持续更新中
 
 
-
+<br>
 
 # PBR知识体系架构图
 - **[PBR知识体系架构图1.0] 高清大图：
@@ -29,7 +29,7 @@
 
 # 常见材质F0参考速查图表PDF下载
 
-- **下载地址: [PBR Material F0 Quick Reference Chart.PDF](https://github.com/QianMo/PBR-White-Paper/raw/master/bonus/%5BPBR-White-Paper%5D%20PBR-Material-F0-Quick-Reference-Chart.pdf)**
+- **常见材质F0参考速查图表PDF: [【下载地址】](https://github.com/QianMo/PBR-White-Paper/raw/master/bonus/%5BPBR-White-Paper%5D%20PBR-Material-F0-Quick-Reference-Chart.pdf)**
 
 ![](bonus/PBR-Material-F0-Quick-Reference-Chart.png)
 
