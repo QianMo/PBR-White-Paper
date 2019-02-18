@@ -5,12 +5,14 @@
 # 基于物理的渲染（PBR）白皮书 | PBR White Paper
 ## 目录
 
-- **[（一） 开篇：PBR核心知识体系总结与概览](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%201/README.md)**
+- :bookmark_tabs: **[（一） 开篇：PBR核心知识体系总结与概览](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%201/README.md)**
 
-- **[（二） PBR核心理论与渲染光学原理总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%202/README.md)**
+- :bookmark_tabs: **[（二） PBR核心理论与渲染光学原理总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%202/README.md)**
 
 
 - 持续更新中
+
+
 
 
 # PBR知识体系架构图
@@ -23,6 +25,16 @@
 
 <br>
 
-# 二、PBR核心理论与渲染光学原理知识架构图
+
+
+# 常见材质F0参考速查图表PDF下载
+
+- **下载地址: [【PBR白皮书】PBR Material F0 Quick Reference Chart.PDF](https://github.com/QianMo/PBR-White-Paper/raw/master/bonus/%5BPBR-White-Paper%5D%20PBR-Material-F0-Quick-Reference-Chart.pdf)**
+
+![](bonus/PBR-Material-F0-Quick-Reference-Chart.png)
+
+<br>
+
+# PBR核心理论与渲染光学原理知识架构图
 
 ![](media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)
