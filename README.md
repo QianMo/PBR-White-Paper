@@ -36,5 +36,7 @@
 <br>
 
 # 【第二章】PBR核心理论与渲染光学原理知识架构图
+- **[PBR核心理论与渲染光学原理知识架构] 高清大图：
+[【下载地址】](https://github.com/QianMo/PBR-White-Paper/raw/master/media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)**
 
 ![](media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)
