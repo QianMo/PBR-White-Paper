@@ -773,7 +773,7 @@ BSDF的图示（根据实际使用情况，Blender对Disney BSDF的实现有相�
 
 图 Disney Principled BSDF @Blender
 
-除了新增的Specular BSDF模型，Disney还提出了新的次表面散射模型，以及针对超薄表面的折射处理，可以总结如下：
+除了新增的Specular BSDF模型，Disney还提出了新的次表面散射模型，以及针对薄表面的折射处理，可以总结如下：
 
 -   **在Disney BRDF中加入次表面散射模型**。具体思路是首先将漫射波瓣重构为两部分：方向性的微表面效应（microsurface effect），主要为逆反射（retroreflection）；非方向性的次表面效应（subsurface effect），即Lambertian。然后，用散射模型（diffusion model）或体积散射模型（volumetric scattering model）替换漫反射波瓣中的Lambert部分。这样，便能保留微表面效应（microsurface effect），让散射模型在散射距离较小时收敛到与漫反射BRDF相同的结果。
 
@@ -795,7 +795,7 @@ BSDF的图示（根据实际使用情况，Blender对Disney BSDF的实现有相�
 
 ![](media/0ec5617fc39027630e17685e7eb076e0.png)
 
-图 《超能陆战队》中基于超薄表面（Thin-surface）渲染技术渲染出的Baybax
+图 《超能陆战队》中基于薄表面（Thin-surface）渲染技术渲染出的Baybax
 
 八、本文内容要点总结
 ====================
