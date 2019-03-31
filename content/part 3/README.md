@@ -2,7 +2,9 @@
 
 # 【基于物理的渲染（PBR）白皮书】（三） 迪士尼原则的BRDF与BSDF相关总结
 
+本文的知乎专栏版本：https://zhuanlan.zhihu.com/p/60977923
 
+<br>
 
 基于物理的渲染（Physically Based Rendering , PBR）技术，自迪士尼在SIGGRAPH 2012上提出了著名的“迪士尼原则的BRDF（Disney Principled BRDF）”之后，由于其高度的易用性以及方便的工作流，已经被电影和游戏业界广泛使用，并成为了次时代高品质渲染技术的代名词。
 
