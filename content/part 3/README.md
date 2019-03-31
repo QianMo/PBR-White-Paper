@@ -389,14 +389,16 @@ Disney Diffuse漫反射模型的公式为：
 
 以下为上述Disney Diffuse的Shader实现代码：
 
-        // [Burley 2012, "Physically-Based Shading at Disney"]
-        float3 Diffuse_Burley_Disney( float3 DiffuseColor, float Roughness, float NoV, float NoL, float VoH )
-        {
-                float FD90 = 0.5 + 2 * VoH * VoH * Roughness;
-                float FdV = 1 + (FD90 - 1) * Pow5( 1 - NoV );
-                float FdL = 1 + (FD90 - 1) * Pow5( 1 - NoL );
-                return DiffuseColor * ( (1 / PI) * FdV * FdL );
-        }
+
+	// [Burley 2012, "Physically-Based Shading at Disney"]
+	float3 Diffuse_Burley_Disney( float3 DiffuseColor, float Roughness, float NoV, float NoL, float VoH )
+	{
+            float FD90 = 0.5 + 2 * VoH * VoH * Roughness;
+            float FdV = 1 + (FD90 - 1) * Pow5( 1 - NoV );
+            float FdL = 1 + (FD90 - 1) * Pow5( 1 - NoL );
+            return DiffuseColor * ( (1 / PI) * FdV * FdL );
+	}
+
 
 
 <br>
@@ -481,11 +483,16 @@ Trowbridge-Reitz（TR）的公式为：
 
 以及各项异性的版本：
 
-        float D_GTR2_aniso(float dotHX, float dotHY, float dotNH, float ax, float ay)
-        {
-                float deno = dotHX * dotHX / (ax * ax) + dotHY * dotHY / (ay * ay) + dotNH * dotNH;
-                return 1.0 / (PI * ax * ay * deno * deno);
-        }
+
+	float D_GTR2_aniso(float dotHX, float dotHY, float dotNH, float ax, float ay)
+	{
+           float deno = dotHX * dotHX / (ax * ax) + dotHY * dotHY / (ay * ay) + dotNH * dotNH;
+           return 1.0 / (PI * ax * ay * deno * deno);
+
+	}
+
+
+
 
 <br>
 
@@ -503,23 +510,24 @@ Trowbridge-Reitz（TR）的公式为：
 
 以下为Schlick Fresnel的Shader实现代码：
 
-
-        // [Schlick 1994, "An Inexpensive BRDF Model for Physically-Based Rendering"]
-        float3 F_Schlick(float HdotV, float3 F0)
-        {
-                return F0 + (1 - F0) * pow(1 - HdotV , 5.0));
-        }
+```
+// [Schlick 1994, "An Inexpensive BRDF Model for Physically-Based Rendering"]
+float3 F_Schlick(float HdotV, float3 F0)
+{
+        return F0 + (1 - F0) * pow(1 - HdotV , 5.0));
+}
+```
 
 
 一般建议实现一个自定义的Pow5工具函数替换pow(xx, 5.0)的调用，以省去pow函数带来的稍昂贵的性能开销。
 
 Pow5函数实现很简单，如下所示：
-
-        half Pow5(half v)
-        {
-                return v * v * v * v * v;
-        }
-
+```
+half Pow5(half v)
+{
+        return v * v * v * v * v;
+}
+```
 
 另外，Disney在SIGGRAPH 2015上对此项进行了修订，提出在介质间相对IOR接近1时，Schlick近似误差较大，这时可以直接用精确的菲涅尔方程：
 
@@ -545,30 +553,32 @@ Pow5函数实现很简单，如下所示：
 
 几何项的Shader实现代码如下：
 
-        // Smith GGX G项，各项同性版本
-        float smithG_GGX(float NdotV, float alphaG)
-        {
-                float a = alphaG * alphaG;
-                float b = NdotV * NdotV;
-                return 1 / (NdotV + sqrt(a + b - a * b));
-        }
+```
+// Smith GGX G项，各项同性版本
+float smithG_GGX(float NdotV, float alphaG)
+{
+        float a = alphaG * alphaG;
+        float b = NdotV * NdotV;
+        return 1 / (NdotV + sqrt(a + b - a * b));
+}
 
-        // Smith GGX G项，各项异性版本
-        // Derived G function for GGX
-        float smithG_GGX_aniso(float dotVN, float dotVX, float dotVY, float ax, float ay)
-        {
-                return 1.0 / (dotVN + sqrt(pow(dotVX * ax, 2.0) + pow(dotVY * ay, 2.0) + pow(dotVN, 2.0)));
-        }
+// Smith GGX G项，各项异性版本
+// Derived G function for GGX
+float smithG_GGX_aniso(float dotVN, float dotVX, float dotVY, float ax, float ay)
+{
+        return 1.0 / (dotVN + sqrt(pow(dotVX * ax, 2.0) + pow(dotVY * ay, 2.0) + pow(dotVN, 2.0)));
+}
 
 
-        // GGX清漆几何项
-        // G GGX function for clearcoat
-        float G_GGX(float dotVN, float alphag)
-        {
-                float a = alphag * alphag;
-                float b = dotVN * dotVN;
-                return 1.0 / (dotVN + sqrt(a + b - a * b));
-        }
+// GGX清漆几何项
+// G GGX function for clearcoat
+float G_GGX(float dotVN, float alphag)
+{
+        float a = alphag * alphag;
+        float b = dotVN * dotVN;
+        return 1.0 / (dotVN + sqrt(a + b - a * b));
+}
+```
 
 同样，Disney在SIGGRAPH 2015上也对G项进行了修订，他们基于Heitz的分析[Heitz 2014]，淘汰了对于主镜面波瓣的Smith G粗糙度的特殊重映射，采用了Heitz各向异性的G，后文会对这次修订做更深入的探讨。
 
