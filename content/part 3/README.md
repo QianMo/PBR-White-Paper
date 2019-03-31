@@ -86,7 +86,7 @@ Principled BRDF）。
 
 以下是主流游戏引擎转移到基于物理的渲染的时间节点：
 
--   【SIGGRAPH 2013】 UE4 ：《Real shading in unreal engine 4》
+-   【SIGGRAPH 2013】 UE4 ：《Real Shading in Unreal Engine 4》
 
 -   【SIGGRAPH 2014】 Frostbite（寒霜）： 《Moving Frostbite to PBR》
 
@@ -156,7 +156,7 @@ BRDF之前，Disney已经做了大量的前置工作，其中，最主要的工�
 
 -   彩虹色（Iridescence）的观察结论
 
-下面分别进行相关总结。
+下文将对其分别进行相关总结。
 
 <br>
 
@@ -420,7 +420,6 @@ Trowbridge-Reitz（TR）的公式为：
 
 通过，Trowbridge-Reitz和Berry的形式的对比，Disney发现其具有相似的形式，只是幂次不同，于是，Disney将Trowbridge-Reitz进行了N次幂的推广，并将其取名为Generalized-Trowbridge-Reitz，GTR：
 
-基于Trowbridge-Reitz的镜面模型
 
 ![](media/6fb3430619d35fecc4267b24f0edf6cd.png)
 
@@ -576,9 +575,7 @@ Pow5函数实现很简单，如下所示：
 # 五、迪士尼原则的分层材质（Disney Principled Layers Material）
 
 
-基于纹理Mask在不同材质之间进行线性混合，以实现复杂的材质外观。
-
-迪士尼原则的分层材质（Disney Principled Layers Material）的核心设计原则是，所有参数需允许健壮地插值。
+迪士尼原则的分层材质（Disney Principled Layers Material）的核心设计原则是，所有参数需允许健壮地插值，以基于纹理Mask在不同材质之间进行线性混合，实现复杂的材质外观。
 
 这样的好处是使所有参数是归一化的并且至少是感知线性的，材质通常以非常直观的方式插值。如下图，所有10个参数都是线性插值的。
 
@@ -777,7 +774,7 @@ BSDF的图示（根据实际使用情况，Blender对Disney BSDF的实现有相�
 
 除了新增的Specular BSDF模型，Disney还提出了新的次表面散射模型，以及针对超薄表面的折射处理，可以总结如下：
 
--   **在Disney BRDF中加入次表面散射模型**。具体思路是首先将漫射波瓣重构为两部分：方向性的微表面效应（microsurface effect），主要为回射反射（retro-reflection，或称逆反射），非方向性的次表面效应（subsurface effect），即Lambertian。然后，用散射模型（diffusion model）或体积散射模型（volumetric scattering model）替换漫反射波瓣中的Lambert部分。这样，便能保留微表面效应（microsurface effect），让散射模型在散射距离较小时收敛到与漫反射BRDF相同的结果。
+-   **在Disney BRDF中加入次表面散射模型**。具体思路是首先将漫射波瓣重构为两部分：方向性的微表面效应（microsurface effect），主要为逆反射（retroreflection）；非方向性的次表面效应（subsurface effect），即Lambertian。然后，用散射模型（diffusion model）或体积散射模型（volumetric scattering model）替换漫反射波瓣中的Lambert部分。这样，便能保留微表面效应（microsurface effect），让散射模型在散射距离较小时收敛到与漫反射BRDF相同的结果。
 
 -   **提出基于两个指数项总和的次表⾯漫射（Subsurface diffusion）模拟模型。** 次表⾯漫射（Subsurface diffusion）。Disney通过蒙特卡洛模拟（Monte Carlo simulation），观察到对于典型的散射参数，包括单次散射的扩散剖面（diffusion profile），使用两个指数项的总和（a sum of two exponentials）便可以很好地进行模拟，且得到了比偶极子剖面（dipole diffusion）更好的渲染结果。如下图所示。
 
