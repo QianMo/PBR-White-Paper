@@ -9,6 +9,7 @@
 
 - **[ 【第二章】 PBR核心理论与渲染光学原理总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%202/README.md)**
 
+- **[ 【第三章】 迪士尼原则的BRDF与BSDF相关总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%203/README.md)**
 
 - 后续章节持续更新中
 
@@ -40,3 +41,10 @@
 [【下载地址】](https://github.com/QianMo/PBR-White-Paper/raw/master/media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)**
 
 ![](media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)
+
+# 【第三章】迪士尼原则的BRDF与BSDF总结架构图
+- **[PBR核心理论与渲染光学原理知识架构] 高清大图：
+[【下载地址】](https://raw.githubusercontent.com/QianMo/PBR-White-Paper/master/media/3-PBR-Disney-Principled-BRDF-BSDF-Knowledge-Architecture.png)**
+
+![](media/3-PBR-Disney-Principled-BRDF-BSDF-Knowledge-Architecture.png)
+
