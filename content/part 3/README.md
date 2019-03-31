@@ -751,7 +751,7 @@ PS: 由于Disney BSDF天生适合离线渲染器使用，对游戏引擎和实�
 
 ![](media/2f8476c7f254d547b0b3799d92b3963b.png)
 
-图1：基于Disney BSDF的渲染的示例
+图 基于Disney BSDF的渲染的示例
 
 前文提到，Disney BRDF模型本质上是金属和非金属的混合型模型，对于Disney BSDF，Disney仍然延续了之前的设计理念，采用了混合的方式并结合已有的Disney BRDF模型进行实现。如下图，Disney新增了⼀个参数specTrans（镜面反射透明度）来控制BRDF 和BSDF的混合。基于specTrans完成混合后，再使用和Disney BRDF类似的方式，基于metallic再进行一次混合。
 
@@ -780,7 +780,7 @@ BSDF的图示（根据实际使用情况，Blender对Disney BSDF的实现有相�
 
 -   **提出基于两个指数项总和的次表⾯漫射（Subsurface diffusion）模拟模型。** 次表⾯漫射（Subsurface diffusion）。Disney通过蒙特卡洛模拟（Monte Carlo simulation），观察到对于典型的散射参数，包括单次散射的扩散剖面（diffusion profile），使用两个指数项的总和（a sum of two exponentials）便可以很好地进行模拟，且得到了比偶极子剖面（dipole diffusion）更好的渲染结果。如下图所示。
 
--   **薄表⾯BSDF（Thin-surface BSDF）**。对于薄的半透明表⾯，Disney选择在单个着色点处模拟入射和出射散射事件，作为镜面反射和漫反射传输的组合，由specTrans和diffTrans参数控制，并用各向同性的波瓣近似薄表面漫反射传输。如图D所示。
+-   **薄表⾯BSDF（Thin-surface BSDF）**。对于薄的半透明表⾯，Disney选择在单个着色点处模拟入射和出射散射事件，作为镜面反射和漫反射传输的组合，由specTrans和diffTrans参数控制，并用各向同性的波瓣近似薄表面漫反射传输。如下图所示。
 
 ![](media/d614155fb47253a0ee9e4a4ef2ac1126.png)
 
@@ -788,7 +788,7 @@ BSDF的图示（根据实际使用情况，Blender对Disney BSDF的实现有相�
 
 ![](media/7e1c50f8956fc87ee61fda566f09c5f8.png)
 
-图 在阴影边界处的skin1的蒙特卡洛散射（Monte Carlo diffusion）渲染作为参考，与指数拟合（exponential fit），以及偶极子剖面（dipole diffusion）的对比。指数拟合与蒙特卡罗散射的参考看不出区别，而偶极子模型有明显的模糊，还有青色条带，这两种现象都是美术人员经常抱怨的。
+图 以阴影边界处的蒙特卡洛散射（Monte Carlo diffusion）渲染作为参考，与指数拟合（exponential fit），以及偶极子剖面（dipole diffusion）的对比。指数拟合与蒙特卡罗散射的参考看不出区别，而偶极子模型有明显的模糊，还有青色条带，这两种现象都是美术人员经常会抱怨的。
 
 ![](media/e747c131163d0a2f3476d8483e0f4b3d.jpg)
 
