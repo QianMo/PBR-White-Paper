@@ -92,7 +92,8 @@ Principled BRDF）。
 
 -   【GDC 2014】 Unity：《Physically Based Shading in Unity》
 
-下面，让我们正式开始分析、提炼和总结SIGGRAPH 2012上迪士尼进行的著名talk《Physically-based shading at Disney》，深入了解其能让基于物理的渲染技术在游戏和电影工业的普及做出巨大推动作用的背后原因。
+下面，让我们正式开始分析、提炼和总结SIGGRAPH 2012上迪士尼进行的talk《Physically-based shading at Disney》，深入了解其能让基于物理的渲染技术普及于游戏和电影工业的背后原因。
+
 
 
 
