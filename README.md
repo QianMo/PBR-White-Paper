@@ -43,7 +43,7 @@
 ![](media/2-PBR-Core-Theory-and-Rendering-Principle-Knowledge-Architecture.png)
 
 # 【第三章】迪士尼原则的BRDF与BSDF总结架构图
-- **[PBR核心理论与渲染光学原理知识架构] 高清大图：
+- **[迪士尼原则的BRDF与BSDF总结知识架构图] 高清大图：
 [【下载地址】](https://raw.githubusercontent.com/QianMo/PBR-White-Paper/master/media/3-PBR-Disney-Principled-BRDF-BSDF-Knowledge-Architecture.png)**
 
 ![](media/3-PBR-Disney-Principled-BRDF-BSDF-Knowledge-Architecture.png)
