@@ -463,7 +463,7 @@ N. Background: Physics and Math of Shading）
 
 -   金属会立即吸收任何透射光，因此它们不会出现任何次表面散射或透明感。
 
--   金属的所有可见颜色都来自反射。
+-   金属的所有可见颜色都来自镜面反射。
 
 ![](media/c9c27edc27b88355947bc4882b3e3f13.png)
 
