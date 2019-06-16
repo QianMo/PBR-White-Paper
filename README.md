@@ -52,7 +52,7 @@
 
 # 【第四章】法线分布函数相关总结架构图
 - **[法线分布函数相关总结架构图知识架构图] 高清大图：
-[【下载地址】](https://raw.githubusercontent.com/QianMo/PBR-White-Paper/master/media/4-PBR-The-NDF)**
+[【下载地址】](https://raw.githubusercontent.com/QianMo/PBR-White-Paper/master/media/4-PBR-The-NDF.png)**
 
 ![](media/4-PBR-The-NDF.png)
 
