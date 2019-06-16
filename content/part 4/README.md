@@ -2,6 +2,8 @@
 
 # 【基于物理的渲染（PBR）白皮书】（四）法线分布函数相关总结
 
+本文的知乎专栏版本：https://zhuanlan.zhihu.com/p/69380665
+
 
 作为基于物理的渲染（PBR）技术中材质高光质感的决定因素，更先进的法线分布函数（Normal
 Distribution Function，NDF）的问世和发展，是PBR能够在游戏和电影工业日益普及的重要推动力之一。
