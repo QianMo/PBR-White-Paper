@@ -361,7 +361,6 @@ float D_GGX( float a2, float NoH )
 	float d = ( NoH * a2 - NoH ) * NoH + 1;	// 2 mad
 	return a2 / ( PI*d*d );			// 4 mul, 1 rcp
 }
-
 ```
 
 
@@ -390,7 +389,6 @@ float D_GGX( float a2, float NoH )
 以下是γ= 1和γ= 2时GTR分布的Shader实现代码：
 
 ```
-
 // Generalized-Trowbridge-Reitz distribution
 float D_GTR1(float alpha, float dotNH)
 {
@@ -409,8 +407,6 @@ float D_GTR2(float alpha, float dotNH)
 
     return a2 / (PI * den * den);
 }
-
-
 ```
 
 ## 4.5 其他分布
@@ -606,7 +602,6 @@ float D_GGX( float a2, float NoH )
 	float d = ( NoH * a2 - NoH ) * NoH + 1;	// 2 mad
 	return a2 / ( PI*d*d );			// 4 mul, 1 rcp
 }
-
 ```
 
 若统计一下两种分布函数的计算指令，可以得到：
@@ -752,9 +747,9 @@ fiber）。@Arnold Renderer
 
 -   关于高光锯齿，业界的解决方案分为两大流派：**屏幕空间抗锯齿（Anti-Aliasing）和预过滤（Pre-Filtering），下面分别进行总结：**
 
--   **屏幕空间抗锯齿（Anti-Aliasing）。**MSAA（MultiSample Anti-Aliasing，多采样抗锯齿），SSAA（SuperSample Anti-Aliasing，超采样抗锯齿）, FXAA（Fast Approximate Anti-Aliasing，快速近似抗锯齿）和TAA（Temporal Anti-Aliasing，时域抗锯齿）等抗锯齿技术可以求解单像素上多个点的入射光，找出其中小的变化点，从而减少可见的锯齿。其中目前较为有效的PBR高光抗锯齿的技术，当属TAA（Temporal Anti-Aliasing，时域抗锯齿）。有关TAA技术的更多详细信息，可以参考UE4在SIGGPRACH 2014中的分享：<http://advances.realtimerendering.com/s2014/epic/TemporalAA.pptx>
+-   **屏幕空间抗锯齿（Anti-Aliasing）。** MSAA（MultiSample Anti-Aliasing，多采样抗锯齿），SSAA（SuperSample Anti-Aliasing，超采样抗锯齿）, FXAA（Fast Approximate Anti-Aliasing，快速近似抗锯齿）和TAA（Temporal Anti-Aliasing，时域抗锯齿）等抗锯齿技术可以求解单像素上多个点的入射光，找出其中小的变化点，从而减少可见的锯齿。其中目前较为有效的PBR高光抗锯齿的技术，当属TAA（Temporal Anti-Aliasing，时域抗锯齿）。有关TAA技术的更多详细信息，可以参考UE4在SIGGPRACH 2014中的分享：<http://advances.realtimerendering.com/s2014/epic/TemporalAA.pptx>
 
--   **预过滤（Pre-Filtering）。**类似Toksvig，LEAN Mapping、CLEAN Mapping和LEADR Mapping等技术方案，按照像素覆盖区域，将宏观几何（macro-
+-   **预过滤（Pre-Filtering）。** 类似Toksvig，LEAN Mapping、CLEAN Mapping和LEADR Mapping等技术方案，按照像素覆盖区域，将宏观几何（macro-
     geometric）（曲率）和中观几何（meso-geometric）（法线贴图，位移贴图）的变化，转移到材质属性的微观几何变化，来保持采样数量较少。这种变换可以更容易和更快地求解像素覆盖区域内发生的所有交互。其中，Toksvig和LEAN Mapping专注于法线贴图的过滤，LEAN映射的简单变体CLEAN Mapping需要较少的存储，代价是失去各向异性支持，而LEADR Mapping则用于位移贴图的过滤。而其他技术则通过将曲率转换为材质属性来近似宏观的几何过滤。Stephen
     Hill的blog文章（<https://blog.selfshadow.com/2011/07/22/specular-showdown/>）对此内方案进行了结合改进，而这边是一个对应的WebGL实现demo：<http://www.selfshadow.com/sandbox/gloss.html>
 
