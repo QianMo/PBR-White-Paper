@@ -6,7 +6,7 @@
 作为基于物理的渲染（PBR）技术中材质高光质感的决定因素，更先进的法线分布函数（Normal
 Distribution Function，NDF）的问世和发展，是PBR能够在游戏和电影工业日益普及的重要推动力之一。
 
-从法线分布函数和微平面理论（Microfacet Theory）的视角来看，基于物理的渲染代表着一种从宏观表现到微观细节的渲染理念的进化，从而对材质有了亚像素级更精细的把控和更科学的定量表示，从而推动了游戏和电影业界带来了渲染品质的提升，以及工作流的升级。
+从法线分布函数和微平面理论（Microfacet Theory）的视角来看，基于物理的渲染代表着一种从宏观表现到微观细节的渲染理念的进化，从而对材质有了亚像素级更精细的把控和更科学的定量表示，从而推动了游戏和电影业界渲染品质的提升，以及工作流的升级。
 
 ![](media/eedbcb7b8e49ef5ad09f0c8bd8e001ee.jpg)
 
@@ -38,7 +38,7 @@ Distribution Function，NDF）的问世和发展，是PBR能够在游戏和电�
 
 -   Blinn-Phong [1977]
 
--   ABC [Church 1989]
+-   ABC [1989]
 
 -   GGX [2007] / Trowbridge-Reitz [1975]
 
@@ -244,7 +244,7 @@ symmetrical）。常见的各项同性法线分布函数按出现时间进行排
 
 -   Blinn-Phong [1977]
 
--   ABC [Church 1989]
+-   ABC [1989]
 
 -   GGX [2007] / Trowbridge-Reitz [1975]
 
