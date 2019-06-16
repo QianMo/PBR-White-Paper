@@ -10,6 +10,7 @@
 - **[ 【第二章】 PBR核心理论与渲染光学原理总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%202/README.md)**
 
 - **[ 【第三章】 迪士尼原则的BRDF与BSDF相关总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%203/README.md)**
+- **[ 【第四章】 法线分布函数相关总结](https://github.com/QianMo/PBR-White-Paper/blob/master/content/part%204/README.md)**
 
 - 后续章节持续更新中
 
