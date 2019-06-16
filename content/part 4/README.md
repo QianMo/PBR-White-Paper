@@ -725,7 +725,11 @@ lobes）架构，可以实现各种效果。
 从左到右：铝花（flakes），表面水滴（raindrops），碳纤维（carbon
 fiber）。@Arnold Renderer
 
-九、PBR中的高光抗锯齿
+<br>
+<br>
+<br>
+
+# 九、PBR中的高光抗锯齿
 
 -   锯齿（Aliasing）是实时渲染和图形学中经常会面对的问题。而PBR由于使用了标准化的法线分布函数（normalized
     NDF），以及无处不在的反射现象，加上实时渲染中较少的采样率，让其高光的锯齿问题更加明显。这导致了基于物理的渲染中，高光锯齿是实践中经常会遇到的问题。
@@ -758,7 +762,7 @@ fiber）。@Arnold Renderer
 <br>
 <br>
 
-#十、主流NDF的局限性和发展趋势
+# 十、主流NDF的局限性和发展趋势
 
 当前主流NDF的局限性可以主要总结为如下三点：
 
@@ -790,14 +794,13 @@ fiber）。@Arnold Renderer
 
 ## 9.2 现有NDF无法表示粗粒度微观结构
 
--   当今使用的NDF从外观而言都很平滑，如上图中左边的NDF。这种NDF**每个像素覆盖了数万个表面细节**，是非常细粒度的微观几何学的良好代表。
+-   当今使用的NDF从外观而言都很平滑，如下图中左边的NDF。这种NDF**每个像素覆盖了数万个表面细节**，是非常细粒度的微观几何学的良好代表。
 
 ![](media/2d6ab4c1432bec1539d4fd5941ba13e0.png)
 
 图 细粒度的NDF vs 粗粒度的NDF（图片来自[Naty 2016]）
 
--   **但其实真实世界中的许多表面材质，具有粗粒度的微观结构，像素仅覆盖了几十个表面元素。**
-    在这种情况下，法线分布的表现更像是如右图所示，表面有一个复杂而闪烁外观，而不仅仅的各项异性这么简单。目前提出的模型都无法表示出这种类型的法线分布。期待未来有更多能解决此问题的法线分布函数的问世。
+-   但其实真实世界中的许多表面材质，具有粗粒度的微观结构，像素仅覆盖了几十个表面元素。在这种情况下，法线分布的表现更像是如如上图的右边所示，表面有一个复杂而闪烁外观，而不仅仅的各项异性这么简单。目前提出的模型都无法表示出这种类型的法线分布。期待未来有更多能解决此问题的法线分布函数的问世。
 
 ![](media/149da3a02441727ca067c8e096c65432.png)
 图 真实世界中的法线分布（图片来自[Yan 2014]）
@@ -826,6 +829,9 @@ fiber）。@Arnold Renderer
 
 -   【The SGGX Microflake Distribution】<https://research.nvidia.com/sites/default/files/pubs/2015-08_The-SGGX-microflake//sggx.pdf>
 
+<br>
+<br>
+<br>
 
 # 十一、本文内容要点总结
 
@@ -833,6 +839,10 @@ fiber）。@Arnold Renderer
 正文到这里已经结束。不妨使用本文主要内容提炼出的思维导图作为全文的内容总结：
 
 ![](media/f5fa35dcb31a083990c8e037f66097a2.png)
+
+<br>
+<br>
+<br>
 
 # Reference
 
@@ -904,3 +914,5 @@ https://assetstore.unity.com/packages/vfx/shaders/ctaa-cinematic-temporal-anti-a
 
 [32] Baker, Dan, "Spectacular Specular--LEAN and CLEAN Specular Highlights,"
 Game Developers Conference, Mar. 2011.http://twvideo01.ubm-us.net/o1/vault/gdc2011/slides/Dan_Baker_SpectacularSpecular.ppt
+
+[33] 题图来自《刺客信条：奥德赛》
