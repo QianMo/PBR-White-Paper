@@ -170,7 +170,7 @@ Rendering 4th》）
 
 ![](media/b6a70732fd616c56ad51468b2d5630cc.png)
 
-图 积分*D*(**m**)(**v** *·* **m**)的微平面区域投影到垂直于v的平面（图中黑色的cos
+图 对*D*(**m**)(**v** *·* **m**)进行积分，微平面区域投影到垂直于v的平面（图中黑色的cos
 *θo*线段），产生宏观表面到该平面的投影，即cos *θo*或(**v·n**)。当多个微平面的投影重叠时，背向（backfacing）微平面的负投影区域抵消了“额外的”前向（frontfacing）微平面。（图片来自《Real-Time
 Rendering 4th》）
 
@@ -435,7 +435,7 @@ float D_GTR2(float alpha, float dotNH)
 
 ![](media/3c17ccb94346e3c1f05d48c399c13135.png)
 
-图 对于形状不变的NDF，缩放粗糙度参数相当于通过倒数拉伸微观几何(图片来自[Naty 2016])
+图 对于形状不变的NDF，缩放粗糙度参数相当于通过倒数拉伸微观几何(图片来自Naty Hoffman, Recent Advances in Physically Based Shading, SIGGRAPH 2016)
 
 -   为了更容易理解形状不变性，可以将NDF视为P22，即一个2D斜率的分布。原始的NDF是一个3D的矢量分布。然后我们可以发现，对于具有形状不变形式的分布，线性缩放粗糙度α会导致斜率空间中的分布线性拉伸。
 
@@ -639,9 +639,9 @@ float D_GGX( float a2, float NoH )
 
 由于n和h都是单位矢量，那么| n×h |^ 2 = 1-（n·h）^2。
 
-这允许我们通过使用简单的叉积| n×h |^2来直接计算半精度浮点数下的1-（n·h）^2。
+于是，我们可以通过使用简单的叉积| n×h |^2来直接计算半精度浮点数下的1-（n·h）^2。
 
-总的来说，这样的优化方案会带来更好的性能，并保持所有计算都在half（mediump）内进行。
+总的来说，此优化方案会带来更好的性能，并保持所有计算都在half（mediump）内进行。
 
 
 UE4对GGX的移动端优化的Shader实现代码如下：
@@ -735,7 +735,7 @@ fiber）。@Arnold Renderer
 
 -   模型精度越高、工作流越倾向于全PBR方式、光照计算精确程度越高，则反射的高光锯齿问题就越明显。
 
--   以下是PBR的高光锯齿和经过TAA处理锯齿后的对比图：
+-   以下是带高光锯齿的PBR渲染图和经过TAA处理锯齿后的对比图：
 
 ![](media/36f5fdc6deeed190682e936b3af105cc.jpg)
 
@@ -784,20 +784,20 @@ fiber）。@Arnold Renderer
 
 ![](media/b2629e0d92a57838fc460817500f60bb.png)
 
-图 广义Beckmann分布（Generalized Beckmann）（图片来自[Naty 2016]）
+图 广义Beckmann分布（Generalized Beckmann）（图片来自Naty Hoffman, Recent Advances in Physically Based Shading, SIGGRAPH 2016）
 
 ![](media/f85cad285577173cfacfbb341aac7b59.png)
 
-图 超柯西分布（Hyper-Cauchy）（图片来自[Naty 2016]）
+图 超柯西分布（Hyper-Cauchy）（图片来自Naty Hoffman, Recent Advances in Physically Based Shading, SIGGRAPH 2016）
 
 
 ## 9.2 现有NDF无法表示粗粒度微观结构
 
--   当今使用的NDF从外观而言都很平滑，如下图中左边的NDF。这种NDF**每个像素覆盖了数万个表面细节**，是非常细粒度的微观几何学的良好代表。
+-   当今使用的NDF从外观而言都很平滑，如下图中左边的NDF。这种NDF每个像素覆盖了数万个表面细节，是对细粒度的微观几何的一种良好表示形式。
 
 ![](media/2d6ab4c1432bec1539d4fd5941ba13e0.png)
 
-图 细粒度的NDF vs 粗粒度的NDF（图片来自[Naty 2016]）
+图 细粒度的NDF vs 粗粒度的NDF（图片来自Naty Hoffman, Recent Advances in Physically Based Shading, SIGGRAPH 2016）
 
 -   但其实真实世界中的许多表面材质，具有粗粒度的微观结构，像素仅覆盖了几十个表面元素。在这种情况下，法线分布的表现更像是如如上图的右边所示，表面有一个复杂而闪烁外观，而不仅仅的各项异性这么简单。目前提出的模型都无法表示出这种类型的法线分布。期待未来有更多能解决此问题的法线分布函数的问世。
 
