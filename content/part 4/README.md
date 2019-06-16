@@ -748,7 +748,7 @@ fiber）。@Arnold Renderer
 -   出现高光锯齿的原因可以总结为： 法线分布函数作为亚像素表面结构（subpixel surface structure）的统计描述。
     当相机和表面之间的距离增加时，先前覆盖多个像素的表面结构会减小到亚像素（subpixel）大小，从而从法线贴图的领域移动到法线分布函数的亚像素领域。在亚像素领域，纹理的mipmap一般以平均的方式进行处理，会丢失原有的细节，从而让该像素处的法线分布过于狭窄和集中，于是便会出现高光在像素级别的不连续性，以闪烁高光（flickering highlights）形式引起锯齿。
 
--   关于高光锯齿，业界的解决方案分为两大流派：**屏幕空间抗锯齿（Anti-Aliasing）和预过滤（Pre-Filtering），下面分别进行总结：**
+-   关于高光锯齿，业界的解决方案分为两大流派：屏幕空间抗锯齿（Anti-Aliasing）和预过滤（Pre-Filtering），下面分别进行总结：
 
 -   **屏幕空间抗锯齿（Anti-Aliasing）。** MSAA（MultiSample Anti-Aliasing，多采样抗锯齿），SSAA（SuperSample Anti-Aliasing，超采样抗锯齿）, FXAA（Fast Approximate Anti-Aliasing，快速近似抗锯齿）和TAA（Temporal Anti-Aliasing，时域抗锯齿）等抗锯齿技术可以求解单像素上多个点的入射光，找出其中小的变化点，从而减少可见的锯齿。其中目前较为有效的PBR高光抗锯齿的技术，当属TAA（Temporal Anti-Aliasing，时域抗锯齿）。有关TAA技术的更多详细信息，可以参考UE4在SIGGPRACH 2014中的分享：<http://advances.realtimerendering.com/s2014/epic/TemporalAA.pptx>
 
