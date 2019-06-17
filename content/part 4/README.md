@@ -812,6 +812,7 @@ fiber）。@Arnold Renderer
 -   目前渲染领域广泛采用的Cook-Torrance microfacet BRDF微平面模型，实际上是人们可以想到的最简单的模型，它仅对几何光学系统中的单层微表面上的单次散射进行建模。没有考虑多次散射，没有考虑衍射，也没有考虑波动光学。其假设所有遮挡的光线都被丢失，会导致与现实行为相比的能量损失。
 
 ![](media/f20190617091939.png)
+
 图 现有Microfacet建模未考虑图中蓝色部分的multiple surface bounce反射（图片来自Naty Hoffman, Recent Advances in Physically Based Shading, SIGGRAPH 2016）
 
 -   对此，一些论文提出，可以采用非基于物理的修正因子（corrective factors）来尝试对缺失的能量进行补偿。例如迪士尼模型中的的“Sheen”光泽项。
