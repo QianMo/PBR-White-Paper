@@ -427,7 +427,7 @@ float D_GTR2(float alpha, float dotNH)
 ![](media/36bd80224cd22376a215c3571cdb34db.png)
 
 
-还有一种等价的写法是：
+其中g( )代表一个表示了NDF形状的一维函数。还有一种等价的写法是：
 
 ![](media/254319e5df9f46d20c6f22e274ba0a01.png)
 
