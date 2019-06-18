@@ -777,7 +777,7 @@ fiber）。@Arnold Renderer
 
 
 
-## 9.1 缺少更好的形状控制NDF
+## 10.1 缺少更好的形状控制NDF
 
 -   现有的主流NDF缺少更好的形状不变性（Shape Invariance）+形状控制（Shape
     Control）的结合。对此，Naty Hoffman在SIGGRAPH
@@ -793,7 +793,7 @@ fiber）。@Arnold Renderer
 图 超柯西分布（Hyper-Cauchy）（图片来自Naty Hoffman, Recent Advances in Physically Based Shading, SIGGRAPH 2016）
 
 
-## 9.2 现有NDF无法表示粗粒度微观结构
+## 10.2 现有NDF无法表示粗粒度微观结构
 
 -   当今使用的NDF从外观而言都很平滑，如下图中左边的NDF。这种NDF每个像素覆盖了数万个表面细节，是对细粒度的微观几何的一种良好表示形式。
 
@@ -807,7 +807,7 @@ fiber）。@Arnold Renderer
 图 真实世界中的法线分布（图片来自[Yan 2014]）
 
 
-## 9.3 单次散射建模的局限性和发展趋势
+## 10.3 单次散射建模的局限性和发展趋势
 
 -   目前渲染领域广泛采用的Cook-Torrance microfacet BRDF微平面模型，实际上是人们可以想到的最简单的模型，它仅对几何光学系统中的单层微表面上的单次散射进行建模。没有考虑多次散射，没有考虑衍射，也没有考虑波动光学。其假设所有遮挡的光线都被丢失，会导致与现实行为相比的能量损失。
 
