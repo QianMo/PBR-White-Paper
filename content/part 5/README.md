@@ -104,7 +104,7 @@ Function）的相关内容进行一个系统的总结：
 
         -   4.2.2 SIGGRAPH 2013：UE4
 
-        -   4.2.3 2014至今：业界转向Smith Joint Masking-Shadowing Function
+        -   4.2.3 SIGGRAPH 2014至今：业界转向Smith Joint Masking-Shadowing Function
 
             -   4.2.3.1 Frostbite 的GGX-Smith Joint近似方案
 
@@ -209,6 +209,9 @@ OK, 按照惯例，开始正文前，先放出本文内容总结的思维导图�
 -   **法线分布函数需要结合几何函数，得到有效的法线分布强度。** 单纯的法线分布函数的输出值并不是能产生有效反射的法线强度，因为光线的入射和出射会被微平面部分遮挡，即并不是所有朝向m=h的微表面，能在给定光照方向L和观察方向V时可以顺利完成有效的反射。几何函数即是对能顺利完成入射和出射的微平面概率进行建模的函数。法线分布函数需要结合几何函数，得到最终对microfacet
     BRDF能产生贡献的有效法线分布强度。
 
+<br>
+<br>
+
 ##  1.4 业界对几何函数模型的选择
 
 
@@ -233,6 +236,9 @@ OK, 按照惯例，开始正文前，先放出本文内容总结的思维导图�
 本节将从微平面理论讲起，引出几何函数，随后聊到业界对于众多几何函数模型的选择，
 
 Smith遮蔽函数成为业界主流的原因，以及从Smith遮蔽函数拓展到Smith联合遮蔽-阴影函数，最后聊到业界主流Microfacet BRDF的缺陷，以及采用Image Work能量补偿的方式解决该缺陷的方案。
+
+<br>
+<br>
 
 ## 2.1 从微平面理论引出几何函数
 
@@ -271,6 +277,9 @@ Smith遮蔽函数成为业界主流的原因，以及从Smith遮蔽函数拓展�
 -   上式中，通过x+的表示方法表达将v · m限制为大于等于0。背面微平面不可见，因此在这种情况下不对其进行计算。乘积G1(m,v)D(m)则表示了可见法线的分布。
 
 -   上式对G1(m,v)施加约束，但并不能唯一地确定它。有无数个函数满足给定微平面法线分布D(m)的约束。这是因为D(m)没有完全指定微表面（microsurface）。它仅告诉我们有多少百分比的微平面（microfacets）的法线指向了某些方向，而没有告诉我们这些法线是如何进行排列。而且对于固定的输出方向v，遮蔽函数（masking functions）是二维，存在无限多个函数满足等式（1）。
+
+<br>
+<br>
 
 ## 2.2 选择合适的微表面轮廓（microsurface profile）
 
@@ -549,6 +558,10 @@ BRDF。（图片来自[Heitz 2014]）
 图 GGX单散射+能量补偿
 
 
+<br>
+<br>
+
+
 # 三、几何函数的基本性质
 
 
@@ -633,6 +646,7 @@ Based Rendering 3rd]）
 
 
 <br>
+<br>
 
 
 ## 4.1 主流法线分布函数导出的Smith遮蔽函数
@@ -650,7 +664,6 @@ Based Rendering 3rd]）
 下面将总结主流各项同性法线分布函数对应的Λ函数的解析形式。
 
 
-<br>
 <br>
 
 
@@ -750,7 +763,7 @@ Smith方程，并采用了Disney对粗糙度的重映射：
 <br>
 
 
-### 4.2.3 2014至今：业界转向Smith Joint Masking-Shadowing Function
+### 4.2.3 SIGGRAPH 2014至今：业界转向Smith Joint Masking-Shadowing Function
 
 -   在2014年，Heitz在JCGT 2014发表了著名的paper 《Understanding the  Masking-Shadowing Function in Microfacet-Based BRDFs》，以及后续在SIGGPRAPH 2014上进行了同名的talk，将游戏和电影业界对遮蔽阴影函数（The Smith Joint Masking-Shadowing Function）的理解上升到了一个新的层次。
 
