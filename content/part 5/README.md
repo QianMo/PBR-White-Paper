@@ -3,8 +3,7 @@
 
 ![](media/2b06ef1685e6df43021b423980b93d48.jpg)
 
-在基于物理的渲染中，几何函数（Geometry Function）是保证Microfacet
-BRDF理论上能量守恒，逻辑上自洽的重要一环。其描述了微平面自阴影的属性，表示具有半矢量法线的微平面（microfacet）中，同时被入射方向和反射方向可见（没有被遮挡的）的比例，即未被遮挡的m
+在基于物理的渲染中，几何函数（Geometry Function）是保证Microfacet BRDF理论上能量守恒，逻辑上自洽的重要一环。其描述了微平面自阴影的属性，表示具有半矢量法线的微平面（microfacet）中，同时被入射方向和反射方向可见（没有被遮挡的）的比例，即未被遮挡的m
 = h微表面的百分比。
 
 在Microfacet Specular
