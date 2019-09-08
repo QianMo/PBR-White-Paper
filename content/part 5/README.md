@@ -72,9 +72,9 @@ Function）的相关内容进行一个系统的总结：
 
         -   2.4.2 高度相关的遮蔽阴影函数（Height-Correlated Masking and Shadowing Function）
 
-        -   2.4.3方向相关的遮蔽阴影函数（Direction-Correlated Masking and Shadowing Function）
+        -   2.4.3 方向相关的遮蔽阴影函数（Direction-Correlated Masking and Shadowing Function）
 
-        -   高度方向相关的遮蔽阴影函数（Height-Direction-Correlated Masking and Shadowing Function）
+        -   2.4.4 高度方向相关的遮蔽阴影函数（Height-Direction-Correlated Masking and Shadowing Function）
 
     -   2.5 多重散射微平面BRDF
 
