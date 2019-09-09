@@ -354,7 +354,7 @@ BRDF。（图片来自[Heitz 2014]）
 ![](media/94e36a9dc49a1b4297703d7a805b64b2.png)
 
 
--   其中 ![](media/72a36cc312878ceffc9c67199a25e673.png)是Smith遮蔽函数的广义形式 [Brown 1980; Walter 2007]。对于许多随机曲面，其具有闭合形式的解。因此，在法线/遮蔽独立（normal/masking independence）的假设下，Smith遮蔽函数是精确的。![](media/cf5196dc3e1df843a9895279cc8e45b6.png)表示微表面斜率上的积分（integral over the slopes of the microsurface）
+-   而 ![](media/72a36cc312878ceffc9c67199a25e673.png)是Smith遮蔽函数的广义形式 [Brown 1980; Walter 2007]。对于许多随机曲面，其具有闭合形式的解。因此，在法线/遮蔽独立（normal/masking independence）的假设下，Smith遮蔽函数是精确的。![](media/cf5196dc3e1df843a9895279cc8e45b6.png)表示微表面斜率上的积分（integral over the slopes of the microsurface）
 
 - ![](media/cf5196dc3e1df843a9895279cc8e45b6.png)的表达式为：
 
