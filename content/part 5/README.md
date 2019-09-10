@@ -164,7 +164,7 @@ OK, 按照惯例，开始正文前，先放出本文内容总结的思维导图�
 
     -   双向遮蔽阴影函数（Bidirectional Shadowing-Masking Function）
 
--   其中，在部分游戏引擎和文献中，几何函数G(l,v,h)和分母中的校正因子4（n·l）（n·v）会进行并，作为可见性项（The Visibility Term），Vis项，简称V项，也经常是其代指：
+-   其中，在部分游戏引擎和文献中，几何函数G(l,v,h)和分母中的校正因子4（n·l）（n·v）会合并为可见性项（The Visibility Term），Vis项，简称V项。其也经常作为几何函数的代指：
 
 ![](media/e2aaf9d6c96b1a523342dd006bfe3114.png)
 
