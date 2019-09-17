@@ -111,7 +111,7 @@ Function）的相关内容进行一个系统的总结：
 
             -   4.2.3.3 Unity HDRP 的GGX-Smith Correlated Joint近似方案
 
-            -   4.2.3.4 Google Failment渲染器 的GGX-Smith Joint近似方案
+            -   4.2.3.4 Google Filament渲染器 的GGX-Smith Joint近似方案
 
             -   4.2.3.5 Respawn Entertainment的 GGX-Smith Joint近似方案
 
@@ -858,9 +858,9 @@ float GetSmithJointGGXPartLambdaVApprox(float NdotV, float roughness)
 <br>
 
 
-#### 4.2.3.4 Google Failment渲染器 的GGX-Smith Joint近似方案
+#### 4.2.3.4 Google Filament渲染器 的GGX-Smith Joint近似方案
 
-Google Failment渲染器采用的 GGX-Smith Correlated Joint Approximate为：
+Google Filament渲染器采用的 GGX-Smith Correlated Joint Approximate为：
 
 ![](media/5655445200dfccdbb4a1bccb6b54991c.png)
 
